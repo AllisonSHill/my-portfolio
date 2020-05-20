@@ -1,0 +1,61 @@
+.App {
+    text-align: center;
+    background: rgb(154,58,180);
+    background: linear-gradient(16deg, rgba(154,58,180,1) 15%, rgba(253,29,64,1) 50%, rgba(252,166,69,1) 94%);
+    background-size: cover;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: aquamarine;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-links li {
+    padding: 0px 5px;
+}
+
+.main-content {
+    background-color: rgba(255, 255, 255, .7);
+    width: 80vw;
+    margin: 0px auto;
+}
+
+.portfolio-content {
+    background-color: rgba(255, 255, 255, .7);
+    width: 80vw;
+    margin: 0px auto;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 80vh;
+    overflow: scroll;
+}
+
+.portfolio-item {
+    background-color: white;
+    margin: 10px;
+    width: 30%;
+}
+
+.portfolio-image {
+    background-color: #6dc2ff;
+}
+
+.portfolio-text {
+    padding: 5px;
+}
