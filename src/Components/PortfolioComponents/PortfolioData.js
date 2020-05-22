@@ -1,3 +1,7 @@
+import ManagementPortalThumb from "../../Images/ManagementPortalThumb.jpg"
+
+console.log(ManagementPortalThumb)
+
 const PortfolioData = [
 
     {
@@ -51,7 +55,7 @@ const PortfolioData = [
         description: "Worked with a team on an employee portal site for a construction company. I worked on both front end and back end projects, and created some really cool elements and functions.",
         repository: "https://github.com/AllisonSHill/ProsperITOverview",
         link: "",
-        image: "https://github.com/AllisonSHill/pictures/blob/master/Mobile%20site/jobSites%20Desktop%20table.png",
+        image: { ManagementPortalThumb },
         //Not sure what's happening here need to host it as separate image?
         date: "2019"
     },

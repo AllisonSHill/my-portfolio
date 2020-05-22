@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import PortfolioData from "./PortfolioComponents/PortfolioData"
+import ManagementPortalThumb from "../Images/ManagementPortalThumb.jpg"
+
 
 function Portfolio() {
 
@@ -28,6 +30,7 @@ function Portfolio() {
             <Link to="/portfolio/other">Other Projects</Link>
 
             <div className="portfolio-container">
+                <img src={ManagementPortalThumb}/>
                 {portfolioItems}
             </div>
 
