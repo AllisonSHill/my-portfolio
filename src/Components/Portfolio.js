@@ -1,37 +1,55 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import {Link} from "react-router-dom"
 import PortfolioData from "./PortfolioComponents/PortfolioData"
-import ManagementPortalThumb from "../Images/ManagementPortalThumb.jpg"
-
 
 function Portfolio() {
 
     const [portfolio, setPortfolio] = useState([])
+    const [filteredPortfolio, setFilteredPortfolio] = useState([])
 
     useEffect(() => {
         setPortfolio(PortfolioData)
+        allProjects()
     }, [])
 
-    const portfolioItems = portfolio.map(item =>
-        <div className="portfolio-item">
-            <h2 key={item.key}>{item.name}</h2>
-            <img src={item.image} />
+    const projects = filteredPortfolio.map(item =>
+        <div className="portfolio-item" key={item.key}>
+            <h2>{item.name}</h2>
+            <img className="portfolio-image" src={item.image} />
             <p>{item.description}</p>
             <a href={item.repository} target="blank">Learn More</a>
             <p className="small-text">{item.date}</p>
         </div>
     )
 
+    function filterProjects(type) {
+        const filteredProjects = portfolio.filter(item => {
+            if (item.type === type)
+                return {
+                    ...item
+                }
+            }
+        )
+        setFilteredPortfolio(filteredProjects)
+    }
+
+    function allProjects() {
+        setFilteredPortfolio(PortfolioData)
+    }
+
     return (
         <div className="main-content">
-            <h1>Portfolio</h1>
-            <Link to="/portfolio/react">React Projects</Link>
-            <Link to="/portfolio/javascript">Javascript Projects</Link>
-            <Link to="/portfolio/other">Other Projects</Link>
+            <div className="portfolio-content">
+                <Link to="/"><h6>Home</h6></Link>
+                <h1>Portfolio</h1>
+                <button onClick={() => allProjects()}>All Projects</button>
+                <button onClick={() => filterProjects("react")}>React Projects</button>
+                <button onClick={() => filterProjects("js")}>Javascript Projects</button>
+                <button onClick={() => filterProjects("other")}>Other Projects</button>
 
-            <div className="portfolio-container">
-                <img src={ManagementPortalThumb}/>
-                {portfolioItems}
+                <div className="portfolio-container">
+                    {projects}
+                </div>
             </div>
 
         </div>
