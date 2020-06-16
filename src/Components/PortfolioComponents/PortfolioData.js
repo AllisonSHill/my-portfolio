@@ -1,7 +1,28 @@
 const PortfolioData = [
 
     {
+        id: 1,
+        name: "React Calculator",
+        type: "react",
+        description: "Calculator capable of doing basic arithmatic.",
+        repository: "https://github.com/AllisonSHill/calculator",
+        link: "",
+        image: "https://lh3.googleusercontent.com/2jsvgt0YKroeQmPKYHOBFHdhPJH_jwzhX15yiHx6VznMlttH6Fqp0AvMRUhpi_nfdDMbtvA--OxKTHVOfWpbXAz-u_lN6aV0OVsiEefkwp2Ruy8QviOfnpWUBU-74WIlVc4sk_MTWw0=w2400",
+        date: "2020"
+
+    },
+    {
         id: 2,
+        name: "React Typing Game",
+        type: "react",
+        description: "Simple game to test typing accuracy. The user has a set amount of time to try to type out the random fact, and is given an accuracy score.",
+        repository: "https://github.com/AllisonSHill/typing-game",
+        link: "",
+        image: "https://lh3.googleusercontent.com/6y9q23v2eJQqKfZU0omBYsdWNRLmu0ukMQf7qfUhon-MlkhyybCx5H21BAnK_5vO5ENkV2Wh8-tVR1ypB6Dg6saWb6SQKE6ZZANxw7em8qbZceWTGzKiEiahCR-0zDr7fG6lAVfP6D8=w2400",
+        date: "2020"
+    },
+    {
+        id: 3,
         name: "Mujeres Iniciando en las Americas",
         type: "other",
         description: "Image, text content, and design are not finalized with the client. Site is temporarily hosted for development work. Redesign of the website for a nonprofit organization based in Guatemala. Created a custom Wordpress theme and am now working on custom elements and Javascript effects the MIA team wants to include.",
@@ -11,7 +32,7 @@ const PortfolioData = [
         date: "2020"
     },
     {
-        id: 3,
+        id: 4,
         name: "Meme Generator",
         type: "react",
         description: "React.js Scrimba course capstone project: Build a meme generator using React.js.",
@@ -21,7 +42,7 @@ const PortfolioData = [
         date: "2020"
     },
     {
-        id: 4,
+        id: 5,
         name: "Custom Wordpress Theme",
         type: "other",
         description: "A custom WP theme, specifically geared toward Theatrical Designers. This theme features a single-column design, fixed navbar, fixed toggle-able sidebar, and is compatible with the customizable features in the WP dashboard.",
@@ -31,7 +52,7 @@ const PortfolioData = [
         date: "2020"
     },
     {
-        id: 5,
+        id: 6,
         name: "Dog Breeds Quiz",
         type: "js",
         description: "Quiz application for a client, Golden Touch Pet Salon, created with vanilla Javascript.",
@@ -41,7 +62,7 @@ const PortfolioData = [
         date: "2019"
     },
     {
-        id: 6,
+        id: 7,
         name: "Conceptual Pizza Restaurant Menu",
         type: "js",
         description: "A single page, functional menu for a conceptual pizza restaurant.",
@@ -51,7 +72,7 @@ const PortfolioData = [
         date: "2019"
     },
     {
-        id: 7,
+        id: 8,
         name: "Management Portal",
         type: "other",
         description: "Worked with a team on an employee portal site for a construction company. I worked on both front end and back end projects, and created some really cool elements and functions.",
@@ -61,7 +82,7 @@ const PortfolioData = [
         date: "2019"
     },
     {
-        id: 8,
+        id: 9,
         name: "Recipe Database",
         type: "other",
         description: "A simple web application for a single user to store recipes. Developed using ASP.NET and Razor Pages.",
@@ -71,7 +92,7 @@ const PortfolioData = [
         date: "2019"
     },
     {
-        id: 9,
+        id: 10,
         name: "SQL Library Database",
         type: "other",
         description: "Conceptual Library database with stored procedures.",
@@ -81,7 +102,7 @@ const PortfolioData = [
         date: "2019"
     },
     {
-        id: 10,
+        id: 11,
         name: "MVC Sample App",
         type: "other",
         description: "Small app for a virtual client, produces car insurance quotes based on a number of factors.",

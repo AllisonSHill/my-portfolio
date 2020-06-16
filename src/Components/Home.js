@@ -1,16 +1,14 @@
 import React from "react"
 import HorizontalScroll from "./horizontal-scroll"
-import HomeComponentOne from "./HomeComponents/home-component-1"
+import HomeLanding from "./HomeComponents/home-landing"
+import HomePortfolio from "./HomeComponents/home-portfolio"
+import HomeSkills from "./HomeComponents/home-skills"
+import HomeAbout from "./HomeComponents/home-about"
+import HomeRecipes from "./HomeComponents/home-recipes"
 
 
 //https://sudo.isl.co/translate-vertical-horizontal/
 //Tutorial/info about sideways scroll
-
-const HomeComponents = React.memo(() =>
-    Array(5)
-        .fill(0)
-        .map((_e, i) => <HomeComponentOne key={`sampleCard-${i}`} />)
-);
 
 function Home() {
     return (
@@ -18,22 +16,15 @@ function Home() {
             <div className="horizontal-section">
                 <HorizontalScroll>
                     <div className="cards-container">
-                        <HomeComponents />
+                        <HomeLanding />
+                        <HomeSkills />
+                        <HomeAbout />
+                        <HomeRecipes />
                     </div>
                 </HorizontalScroll>
             </div>
         </div>
 )
 }
-//<div className="home-scroll-container">
-//    <h1>Allison Hill</h1>
-//    <h3>React & Javascript Developer</h3>
-//</div>
-//<div className="home-scroll-container">
-//    <Link to="/portfolio"><h3>View my Portfolio</h3></Link>
-//</div>
-//    <div className="home-scroll-container">
-//        <Link to="/about"><h3>About Me</h3></Link>
-//    </div>
 
 export default Home
