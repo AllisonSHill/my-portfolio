@@ -1,23 +1,51 @@
 /*******************FONTS***************************/
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fira Sans', sans-serif;
+    text-shadow: 0px 1px 0px rgb(180,150,240);
 }
 
-p, a, button {
-    font-family: 'Montserrat', sans-serif;
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin: .5em 0px;
+}
+
+h6 {
+    font-size: 1em;
+    margin: .8em 0px;
+}
+
+p, a, button, .small-text, small {
+    font-family: Nunito, sans-serif;
+    /*text-shadow: 0px 1px 0px rgb(180,150,240);*/
+}
+
+.small-text {
+    font-size: .8em;
+    margin: .5em 0px;
 }
 
 /**********END OF FONTS********************/
 
 body {
     background: rgb(154,58,180);
-    background: linear-gradient(16deg, rgba(154,58,180,1) 15%, rgba(253,29,64,1) 50%, rgba(252,166,69,1) 94%);
+    /*background: linear-gradient(16deg, rgba(154,58,180,1) 15%, rgba(253,29,64,1) 50%, rgba(252,166,69,1) 94%);*/
+    background: linear-gradient(16deg, rgba(230,100,255,1) 15%, rgba(255,129,164,1) 50%, rgba(255,255,169,1) 94%);
     background-size: cover;
     background-attachment: fixed;
     /*margin-top: -21px;*/
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .App {
@@ -37,11 +65,15 @@ body {
     margin-left: 40px;
 }
 
-.button-menu, .button-menu a {
-    width: 100vw;
-    text-align: left;
+.button-menu {
     color: white;
-    padding: 10px;
+    position: absolute;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+.button-menu a {
+    color: white;
 }
 
 #hamburger-menu {
@@ -91,7 +123,7 @@ body {
 }
 
 .main-content {
-    height: 100vh;
+    /*height: 90vh;*/
 }
 
 .nav-links ul {
@@ -109,7 +141,7 @@ body {
 .horizontal-section {
     position: relative;
     width: 100vw;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .sticky-inner-container {
@@ -120,9 +152,13 @@ body {
     overflow-x: hidden;
 }
 
+/*.mountains-layer-1 {                  /*********************************Revisit to work out parallax**********************/
+    /*background-image: url("./Images/blueMtnPngDwnld.png");
+}*/
+
 .cards-container {
     position: relative;
-    height: 100%;
+    height: 100vh;
     padding: 0 0 0 4%;
     display: flex;
     flex-flow: row nowrap;
@@ -133,11 +169,45 @@ body {
 .home-component {
     position: relative;
     height: 85vh;
-    width: 70vw;
+    width: 80vw;
     background: radial-gradient(rgba(255,255,255,.9), rgba(255,255,255,0) 70%);
     margin-right: 50px;
     flex-shrink: 0;
 }
+
+.home-component h3 {
+    font-family: 'Playball';
+    font-size: 3em;
+}
+
+.landing-home-component {
+    padding-top: 15%;
+}
+
+.skills-home-component {
+    padding: 10px 40px;
+}
+
+#skills-home-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.skills-home-big-icons {
+    font-size: 5em;
+}
+
+.skills-home-small-icons {
+    font-size: 3em;
+    padding: 0px 20%;
+}
+
+.skills-option {
+    margin: 5% 7%; 
+}
+
+/***********************************not using rn******************************/
 
 .portfolio-highlights {
     display: flex;
@@ -165,17 +235,26 @@ body {
     margin: 0px 10px 10px 0px;
 }
 
+/******************end of not using rn**********************/
+
+
 .portfolio-content {
     margin-bottom: 0px;
 }
 
+.portfolio-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 .portfolio-button {
     box-shadow: inset 0px 1px 0px 0px #fbafe3;
-    background: linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
-    background-color: #ff5bb0;
+    background: linear-gradient(to bottom, rgb(80,50,140) 5%, rgb(30, 0, 60) 100%);
+    background-color: rgb(30,0,60);
     border-radius: 6px;
-    border: 1px solid #ee1eb5;
+    border: 1px solid rgb(30,0,60);
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
@@ -183,11 +262,11 @@ body {
     font-weight: bold;
     padding: 6px 24px;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #c70067;
+    margin: 3px;
 }
 
     .portfolio-button:hover {
-        background: linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+        background: linear-gradient(to bottom, rgb(30, 0, 60) 5%, rgb(80,50,140) 100%);
         background-color: #ef027d;
     }
 
@@ -197,23 +276,41 @@ body {
     }
 
 .portfolio-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 80vh;
-    margin-bottom: 0px;
-    overflow: scroll;
+    -webkit-columns: 3 400px;
+        -moz-columns: 3 400px;
+        columns: 3 400px;
+    margin: 10px 3px;
 }
 
-.portfolio-container::-webkit-scrollbar {
-    display: none;
+.portfolio-container-wrapper {
+    height: 80vh;
+    overflow: scroll;
+    margin: 0px 40px;
 }
+
+.portfolio-container-wrapper::-webkit-scrollbar {
+    width: 7px;
+}
+
+    .portfolio-container-wrapper::-webkit-scrollbar-thumb {
+        background: rgb(30, 0, 60);
+        border-radius: 5px;
+    }
+
+    .portfolio-container-wrapper::-webkit-scrollbar-track {
+        width: 10px;
+        background: none;
+    }
 
 .portfolio-item {
     background-color: rgba(255,255,240,.7);
-    margin: 10px;
-    width: 30%;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    padding: 5px 0px 4px 0px;
+    -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    box-shadow: rgba(0,0,0,.7) -4px 4px 8px;
 }
 
 .portfolio-image {
@@ -221,8 +318,17 @@ body {
     height: auto;
 }
 
+.portfolio-arrow {
+    font-size: 1.6em;
+}
+
 #portfolio-description-container {
-    margin: 0px 5%;
+    margin: 5% 5%;
+    text-align: left;
+}
+
+#portfolio-description-container p {
+    margin: 0px;
 }
 
 #portfolio-description-container.show {

@@ -5,9 +5,10 @@
     "\\src",
     "\\src\\Components",
     "\\src\\Components\\HomeComponents",
+    "\\src\\Components\\HomeComponents\\home-skills-files",
     "\\src\\Components\\PortfolioComponents",
     "\\src\\Images"
   ],
-  "SelectedNode": "\\src\\Components\\Portfolio.js",
+  "SelectedNode": "\\src\\App.css",
   "PreviewInSolutionExplorer": false
 }

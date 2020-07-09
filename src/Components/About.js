@@ -12,13 +12,11 @@ function About() {
                 <p>
                     This is the page where I tell you things about myself that aren't on my resume. 
                     <br />
-                    I climb rocks.
+                    I climb rocks and mountains.
                     <br />
-                    I climb mountains.
+                    My animals are cooler than yours.
                     <br />
-                    I cook stuff. There's a whole separate page for the stuff I cook <Link to="/recipes">here</Link>.
-                    <br />
-                    
+                    Check out my Instagram to learn more about me! 
                 </p>
             </div>
         </div>
