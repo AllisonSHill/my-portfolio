@@ -11,6 +11,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2.5em;
+    margin: 0px;
+    padding: 50px 0px 20px 0px;
 }
 
 h2 {
@@ -102,6 +104,10 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 
+#hamburger-menu h1 {
+    padding: 0px;
+}
+
 #hamburger-menu a {
     color: white;
     text-decoration: none;
@@ -110,6 +116,7 @@ body::-webkit-scrollbar {
 #hamburger-menu ul {
     text-align: left;
     padding-left: 10px;
+    margin-top: 0px;
 }
 
 #hamburger-menu li {
@@ -181,6 +188,9 @@ body::-webkit-scrollbar {
 }
 
 .landing-home-component {
+    /*padding-top: 15%;*/
+    width: 90%;
+    margin: auto;
     padding-top: 15%;
 }
 
@@ -247,6 +257,7 @@ body::-webkit-scrollbar {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
 .portfolio-button {
@@ -284,7 +295,7 @@ body::-webkit-scrollbar {
 
 .portfolio-container-wrapper {
     height: 80vh;
-    overflow: scroll;
+    overflow-y: scroll;
     margin: 0px 40px;
 }
 
@@ -343,14 +354,91 @@ body::-webkit-scrollbar {
     padding: 5px;
 }
 
-.bio-wrapper {
-    display: flex;
-    flex-direction: row;
+/*************************ABOUT PAGE GRID**************************/
+
+.about-grid {
+    display: grid;
+    /*align-items: center;*/
+    /*grid-template-columns: auto auto 50px auto auto auto auto auto;*/
+    grid-template-rows: 120px 120px 120px 40px auto auto auto auto auto;
 }
 
-.bio-image {
-    width: 250px;
+.cause-logo {
+    margin: 0px 20px;
 }
+
+.cause-container-1 {
+    grid-column-start: 4;
+}
+
+.cause-container-2 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.cause-container-3 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+    grid-row-end: span 2;
+}
+
+.dasani {
+    grid-column-end: span 4;
+    grid-row-start: 1;
+    grid-row-end: span 4;
+}
+
+.pikespeak {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+}
+
+.guanellaV2 {
+    grid-column-start: 7;
+    grid-column-end: span 2;
+    grid-row-start: 5;
+    grid-row-end: span 3;
+}
+
+.flintlock {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 4;
+    grid-row-end: span 4;
+}
+
+.redRockV1 {
+    grid-column-start: 3;
+    grid-column-end: span 3;
+    grid-row-start: 7;
+    grid-row-end: span 3;
+}
+
+.meGlasses {
+    grid-row-start: 1;
+    grid-row-end: span 3;
+    grid-column-start: 2;
+}
+
+.benny {
+    grid-column-start: 6;
+    grid-row-start: 5;
+}
+
+.biers {
+    grid-column-start: 3;
+    grid-column-end: span 3;
+    grid-row-start: 5;
+    grid-row-end: span 2;
+}
+
+.flo {
+    grid-column-start: 6;
+    grid-row-start: 6;
+}
+
+/****************************END ABOUT PAGE GRID******************************/
 
 .recipe-wrapper {
     height: 90vh;

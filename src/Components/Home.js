@@ -32,9 +32,7 @@ function Home() {
         return (
         <div className="main-content">
             <div className="">
-                    <div className="cards-container">
-                        <HomeLanding />
-                    </div>
+                <HomeLanding />
             </div>
         </div>
 )

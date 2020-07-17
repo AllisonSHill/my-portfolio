@@ -5,7 +5,7 @@ import meNoGlasses from "../Images/meNoGlasses.jpg"
 function Skills() {
     return (
         <div className="main-content">
-            <p>Skills</p>
+            <h1>Skills</h1>
         </div>
     )
 }

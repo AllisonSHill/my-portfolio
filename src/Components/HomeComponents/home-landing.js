@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 function HomeLanding() {
     return (
-        <div className="home-component">
+        //<div className="home-component">
             <div className="landing-home-component">
                 <h6>h6 My name is</h6>
                 <h1>h1 Allison Hill</h1>
@@ -12,7 +12,7 @@ function HomeLanding() {
                 <h4>h4 I built this site using Reactjs, its still a work in progress!</h4>
                 <Link to="/portfolio">View my Portfolio</Link>
             </div>
-        </div>
+        //</div>
     )
 }
 
