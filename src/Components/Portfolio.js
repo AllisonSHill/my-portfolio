@@ -43,13 +43,15 @@ function Portfolio() {
     return (
         <div className="main-content">
             <div className="portfolio-content">
+                <div className="portfolio-titles">
                 <h1>Portfolio of Projects</h1>
                 <h6>Filter by project type:</h6>
-                <div className="portfolio-button-container">
-                    <button className="portfolio-button" onClick={() => allProjects()}>All Projects</button>
-                    <button className="portfolio-button" onClick={() => filterProjects("react")}>React Projects</button>
-                    <button className="portfolio-button" onClick={() => filterProjects("js")}>Javascript Projects</button>
-                    <button className="portfolio-button" onClick={() => filterProjects("other")}>Other Projects</button>
+                    <div className="portfolio-button-container">
+                        <button className="portfolio-button" onClick={() => allProjects()}>All Projects</button>
+                        <button className="portfolio-button" onClick={() => filterProjects("react")}>React Projects</button>
+                        <button className="portfolio-button" onClick={() => filterProjects("js")}>Javascript Projects</button>
+                        <button className="portfolio-button" onClick={() => filterProjects("other")}>Other Projects</button>
+                    </div>
                 </div>
                 <div className="portfolio-container-wrapper">
                 <div className="portfolio-container">

@@ -6,9 +6,11 @@
     "\\src\\Components",
     "\\src\\Components\\HomeComponents",
     "\\src\\Components\\HomeComponents\\home-skills-files",
+    "\\src\\Components\\MiscComponents",
     "\\src\\Components\\PortfolioComponents",
+    "\\src\\Components\\SkillComponents",
     "\\src\\Images"
   ],
-  "SelectedNode": "\\src\\App.css",
+  "SelectedNode": "\\src\\Images\\flintlock.jpg",
   "PreviewInSolutionExplorer": false
 }

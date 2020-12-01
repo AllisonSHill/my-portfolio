@@ -13,7 +13,6 @@ import Portfolio from "./Components/Portfolio"
 import About from "./Components/About"
 import Skills from "./Components/Skills"
 import Contact from "./Components/Contact"
-import Recipe from "./Components/MiscComponents/Recipe"
 
 
 
@@ -30,14 +29,15 @@ function App() {
                 {MenuButton}
                 <Link to="/"><FontAwesomeIcon icon={faHome} className="homeButton" /></Link>
             </div>
-            <Switch>
-                <Route exact path="/"><Home /></Route>
-                <Route exact path="/portfolio"><Portfolio /></Route>
-                <Route exact path="/about"><About /></Route>
-                <Route exact path="/skills"><Skills /></Route>
-                <Route exact path="/contact"><Contact /></Route>
-                <Route exact path="/recipes"><Recipe /></Route>
-            </Switch>
+            <div className="content-wrapper" onClick={() => { setHidden(true) }}>
+                <Switch>
+                    <Route exact path="/"><Home /></Route>
+                    <Route exact path="/portfolio"><Portfolio /></Route>
+                    <Route exact path="/about"><About /></Route>
+                    <Route exact path="/skills"><Skills /></Route>
+                    <Route exact path="/contact"><Contact /></Route>
+                </Switch>
+            </div>
         </div>
     );
 }

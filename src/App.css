@@ -40,7 +40,8 @@ p, a, button, .small-text, small {
 body {
     background: rgb(154,58,180);
     /*background: linear-gradient(16deg, rgba(154,58,180,1) 15%, rgba(253,29,64,1) 50%, rgba(252,166,69,1) 94%);*/
-    background: linear-gradient(16deg, rgba(230,100,255,1) 15%, rgba(255,129,164,1) 50%, rgba(255,255,169,1) 94%);
+    /*background: linear-gradient(16deg, rgba(230,100,255,1) 15%, rgba(255,129,164,1) 50%, rgba(255,255,169,1) 94%);*/
+    background: linear-gradient(16deg, rgb(80,50,140) 15%, rgb(180,150,240) 50%, #00e0ff 94%);
     background-size: cover;
     background-attachment: fixed;
     /*margin-top: -21px;*/
@@ -52,7 +53,7 @@ body::-webkit-scrollbar {
 
 .App {
     text-align: center;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .hamburger, .closeMenu, .homeButton {
@@ -163,7 +164,7 @@ body::-webkit-scrollbar {
     /*background-image: url("./Images/blueMtnPngDwnld.png");
 }*/
 
-.cards-container {
+/*.cards-container {
     position: relative;
     height: 100vh;
     padding: 0 0 0 4%;
@@ -171,15 +172,12 @@ body::-webkit-scrollbar {
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-}
+}*/
 
 .home-component {
-    position: relative;
-    height: 85vh;
-    width: 80vw;
-    background: radial-gradient(rgba(255,255,255,.9), rgba(255,255,255,0) 70%);
-    margin-right: 50px;
-    flex-shrink: 0;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
 }
 
 .home-component h3 {
@@ -188,34 +186,69 @@ body::-webkit-scrollbar {
 }
 
 .landing-home-component {
-    /*padding-top: 15%;*/
-    width: 90%;
-    margin: auto;
-    padding-top: 15%;
+    width: 100vw;
+    margin: 0px auto;
+    padding-top: 10%;
+    z-index: 200;
+    position: absolute;
+    background: radial-gradient(rgba(255,255,255,.5), rgba(255,255,255,0) 70%);
+    color: #e1e1e1;
 }
 
-.skills-home-component {
-    padding: 10px 40px;
+.landing-home-component h1 {
+    font-size: 3em;
+    text-shadow: 1px -1px 25px black, 1px 1px 2px #5b5b5b, -1px -1px 2px #5b5b5b;
+    padding-bottom: 0px;
 }
 
-#skills-home-icons {
+.landing-home-component h2 {
+    font-size: 2.3em;
+    text-shadow: 1px -1px 25px black, 1px 1px 1px #5b5b5b, -1px -1px 1px #5b5b5b;
+    margin-bottom: 40px;
+}
+
+.landing-home-component h4, h5 {
+    font-family: Nunito, sans-serif;
+    text-shadow: 1px -1px 10px black;
+    margin: 0px;
+}
+
+.landing-home-component h4 {
+    font-size: 1.4em;
+}
+
+.landing-home-component h5 {
+    font-size: 1.2em;
+}
+
+.landing-home-component a {
+    color: lightblue;
+}
+
+.landing-home-component .link {
+    margin-top: 30px;
+}
+
+.red-circle {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 50px;
+}
+
+.parallax-top {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
 }
 
-.skills-home-big-icons {
-    font-size: 5em;
+.parallax-img {
+    bottom: 0;
 }
 
-.skills-home-small-icons {
-    font-size: 3em;
-    padding: 0px 20%;
+.parallax-img img {
+    height: 100vh;
 }
 
-.skills-option {
-    margin: 5% 7%; 
-}
 
 /***********************************not using rn******************************/
 
@@ -286,6 +319,10 @@ body::-webkit-scrollbar {
         top: 1px;
     }
 
+.portfolio-titles {
+    height: 35vh;
+}
+
 .portfolio-container {
     -webkit-columns: 3 400px;
         -moz-columns: 3 400px;
@@ -294,7 +331,7 @@ body::-webkit-scrollbar {
 }
 
 .portfolio-container-wrapper {
-    height: 80vh;
+    height: 65vh;
     overflow-y: scroll;
     margin: 0px 40px;
 }
@@ -354,91 +391,386 @@ body::-webkit-scrollbar {
     padding: 5px;
 }
 
-/*************************ABOUT PAGE GRID**************************/
+/**************************SKILLS PAGE*************************/
 
-.about-grid {
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.skills-grid {
     display: grid;
-    /*align-items: center;*/
-    /*grid-template-columns: auto auto 50px auto auto auto auto auto;*/
-    grid-template-rows: 120px 120px 120px 40px auto auto auto auto auto;
+    grid-template-columns: 100px 150px 50px 150px 100px;
+    grid-template-rows: 150px 50px 50px 50px 150px;
 }
 
-.cause-logo {
-    margin: 0px 20px;
+.main-skills-circle, .small-skills-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.cause-container-1 {
-    grid-column-start: 4;
+.small-skills-circle p {
+    font-size: 1.3em;
+    color: white;
+    text-shadow: -2px 1px 2px #292929;
 }
 
-.cause-container-2 {
-    grid-column-start: 4;
-    grid-row-start: 2;
+.main-skills-circle p {
+    font-size: 2em;
+    color: white;
+    text-shadow: -2px 2px 5px black;
 }
 
-.cause-container-3 {
-    grid-column-start: 4;
-    grid-row-start: 3;
-    grid-row-end: span 2;
+.main-skills-circle small {
+    font-size: .5em;
 }
 
-.dasani {
-    grid-column-end: span 4;
-    grid-row-start: 1;
-    grid-row-end: span 4;
-}
-
-.pikespeak {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: span 3;
-}
-
-.guanellaV2 {
-    grid-column-start: 7;
-    grid-column-end: span 2;
-    grid-row-start: 5;
-    grid-row-end: span 3;
-}
-
-.flintlock {
-    grid-column-start: 1;
-    grid-column-end: span 2;
-    grid-row-start: 4;
-    grid-row-end: span 4;
-}
-
-.redRockV1 {
+.main-skills-circle {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgb(231, 56, 0) 15%, rgb(239, 111, 30) 50%, rgb(255, 156, 0) 94%);
+    border-radius: 50%;
+    box-shadow: -7px 7px 10px black;
     grid-column-start: 3;
-    grid-column-end: span 3;
-    grid-row-start: 7;
-    grid-row-end: span 3;
+    grid-row-start: 3;
+    justify-self: center;
+    align-self: center;
 }
 
-.meGlasses {
+.small-skills-circle.show {
+    background: radial-gradient(circle, rgb(255, 172, 0) 15%, rgb(255, 193, 0) 50%, rgb(252, 245, 69) 94%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: -4px 4px 10px black;
+}
+
+.small-skills-circle.hide {
+    display: none;
+}
+
+#item1 {
     grid-row-start: 1;
-    grid-row-end: span 3;
     grid-column-start: 2;
 }
 
-.benny {
-    grid-column-start: 6;
+#item2 {
+    grid-row-start: 1;
+    grid-column-start: 4;
+}
+
+#item3 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+#item4{
+    grid-row-start: 2;
+    grid-column-start: 5;
+    justify-self: end;
+}
+
+#item5 {
     grid-row-start: 5;
+    grid-column-start: 2;
 }
 
-.biers {
-    grid-column-start: 3;
-    grid-column-end: span 3;
+#item6 {
     grid-row-start: 5;
-    grid-row-end: span 2;
+    grid-column-start: 4;
 }
 
-.flo {
-    grid-column-start: 6;
-    grid-row-start: 6;
+.resume-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/****************************END ABOUT PAGE GRID******************************/
+.resume-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgb(209, 0, 81) 15%, rgb(235, 0, 119) 50%, rgb(255, 66, 136) 94%);
+    color: white;
+    text-shadow: -2px 2px 3px black;
+    font-size: 1.2em;
+    box-shadow: -4px 4px 10px black;
+    border: none;
+}
+
+    .resume-button:hover {
+        background: radial-gradient(circle, rgb(255, 66, 136) 94%, rgb(235, 0, 119) 50%, rgb(209, 0, 81) 15% );
+        cursor: pointer;
+    }
+
+.resume-button:active {
+    position: relative;
+    top: 1px;
+}
+
+/*************************END SKILLS PAGE*********************/
+
+/*************************ABOUT PAGE**************************/
+
+.about-subtitle {
+    padding: 10px 10px;
+    color: white;
+    background-color: rgba(0,0,0,.5);
+}
+
+.about-bio {
+    background-color: rgba(255,255,255,.8);
+    color: black;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-bio a {
+    color: #5500ad;
+}
+
+.about-bio-image {
+    max-height: 70vh;
+}
+
+.about-bio-text {
+    padding: 3% 5%;
+}
+
+/***************************ABOUT MODALS****************************/
+
+.cause-modal-wrapper, .pets-modal-wrapper, .social-modal-wrapper {
+    position: fixed;
+    z-index: 500;
+    width: 80%;
+    box-sizing: border-box;
+    /*max-height: 70%;*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /*transition: all 2s ease-out;*/   /*This doesn't work*/
+}
+
+    .cause-modal-wrapper::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .cause-modal-wrapper::-webkit-scrollbar-thumb {
+        background: rgb(30, 0, 60);
+        border-radius: 5px;
+    }
+
+    .cause-modal-wrapper::-webkit-scrollbar-track {
+        width: 10px;
+        background: none;
+    }    
+    
+    .pets-modal-wrapper::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .pets-modal-wrapper::-webkit-scrollbar-thumb {
+        background: rgb(30, 0, 60);
+        border-radius: 5px;
+    }
+
+    .pets-modal-wrapper::-webkit-scrollbar-track {
+        width: 10px;
+        background: none;
+    }    
+    
+    .social-modal-wrapper::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .social-modal-wrapper::-webkit-scrollbar-thumb {
+        background: rgb(30, 0, 60);
+        border-radius: 5px;
+    }
+
+    .social-modal-wrapper::-webkit-scrollbar-track {
+        width: 10px;
+        background: none;
+    }
+
+.cause-modal-wrapper {
+    left: 0;
+}
+
+.pets-modal-wrapper {
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.social-modal-wrapper {
+    right: 0;
+}
+
+#about-modal.hide {
+    display: none;
+}
+
+.about-modal-button {
+    height: 3em;
+    width: 33.333333333%;
+    z-index: 400;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    text-shadow: 0px 1px 0px #263666;
+}
+
+    .about-modal-button:hover {
+        background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+    }
+
+    .about-modal-button:active {
+        position: relative;
+        top: 1px;
+    }
+
+.cause-modal {
+    background: linear-gradient(#2398a2, #7fefff);
+    padding: 20px;
+}
+
+#cause-modal-button {
+    background: linear-gradient(#00e0ff, #2398a2);
+}
+
+    #cause-modal-button:hover, #cause-modal-button:active {
+        background: linear-gradient(#2398a2, #00e0ff);
+    }
+
+.causes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0px;
+}
+
+.single-cause {
+    background: rgba(255,255,255,.7);
+    width: 45%;
+    text-align: left;
+    align-items: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    }
+
+    .single-cause h3 {
+        padding: 0px 40px;
+    }
+
+    .single-cause p {
+        padding: 0px 40px;
+    }
+
+.pets-modal {
+    background: linear-gradient(#c92c9d, #fdb6f6);
+}
+
+.pets-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pets-wrapper {
+    background-color: rgba(255,255,255,.6);
+    width: 750px;
+    padding: 2% 0px;
+}
+
+.pets-images-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pets-names-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#pets-modal-button {
+    background: linear-gradient(#ff40ec, #c92c9d);
+}
+
+    #pets-modal-button:hover, #pets-modal-button:active {
+        background: linear-gradient(#a2237e, #ff00e5);
+    }
+
+.social-modal {
+    background: linear-gradient(#23a234, #94ffa2);
+    padding: 10px;
+}
+
+#social-modal-button {
+    background: linear-gradient(#00ff21, #23a234);
+}
+
+    #social-modal-button:hover, #social-modal-button:active {
+        background: linear-gradient(#23a234, #00ff21);
+    }
+
+.social-network-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0px;
+}
+
+.single-social-network {
+    background: rgba(255,255,255,.7);
+    width: 45%;
+    text-align: left;
+    align-items: center;
+    padding: 15px;
+}
+
+.single-social-network a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.single-social-network p {
+    padding: 0px 40px;
+}
+
+/***************************END ABOUT MODAL******************************/
+
+/***************************CONTACT PAGE********************************/
+
+#contact h1 {
+    padding: 25px 0px 15px 0px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.climbing-picture-img {
+    max-width: 100vw;
+    max-height: 85vh;
+}
+
+/***************************END CONTACT PAGE***************************/
 
 .recipe-wrapper {
     height: 90vh;

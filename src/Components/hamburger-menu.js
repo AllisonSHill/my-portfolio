@@ -16,8 +16,7 @@ function HamburgerMenu({ hidden }) {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/portfolio">Portfolio</Link></li>
                     <li><Link to="/skills">Skills and Resume</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact Me</Link></li>
+                    <li><Link to="/about">About and Contact</Link></li>
                 </ul>
             </div>
         </div>
