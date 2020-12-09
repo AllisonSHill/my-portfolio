@@ -165,7 +165,7 @@ function HomeLanding() {
                 <h1>Allison Hill</h1>
                 <h2>Front End Developer</h2>
                 <h4>I built this site in 2020 using Reactjs</h4>
-                <h5>(its very much a work in progress)</h5>
+                <h5>(its very much a work in progress - responsive design to come)</h5>
                 <h5 className="link"><Link to="/portfolio">View my Portfolio</Link></h5>
                 <h5><Link to="/about">Contact Me</Link></h5>
             </div>
