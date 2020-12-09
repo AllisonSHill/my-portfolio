@@ -27,11 +27,11 @@ function App() {
             <HamburgerMenu hidden={hidden} />
             <div className="button-menu">
                 {MenuButton}
-                <Link to="/"><FontAwesomeIcon icon={faHome} className="homeButton" /></Link>
+                <Link to="/my-portfolio"><FontAwesomeIcon icon={faHome} className="homeButton" /></Link>
             </div>
             <div className="content-wrapper" onClick={() => { setHidden(true) }}>
                 <Switch>
-                    <Route exact path="/"><Home /></Route>
+                    <Route exact path="/my-portfolio"><Home /></Route>
                     <Route exact path="/portfolio"><Portfolio /></Route>
                     <Route exact path="/about"><About /></Route>
                     <Route exact path="/skills"><Skills /></Route>
