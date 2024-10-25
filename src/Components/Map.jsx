@@ -1,9 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
+import * as ExifReader from 'exifreader';
 
 const Map = () => {
   const mapDiv = useRef(null);
   const map = useRef(null);
+
+  const processImage = async () => {
+    try {
+      const response = await fetch('URL_TO_YOUR_IMAGE'); // Replace with the image URL
+      const blob = await response.blob();
+      const tags = await ExifReader.load(blob);
+      const imageDate = tags['DateTimeOriginal'].description;
+      console.log(imageDate);
+    } catch (error) {
+      console.error('Error reading EXIF data:', error);
+    }
+  }
+
+  useEffect(() => {
+    processImage()
+  }, [])
 
   useEffect(() => {
     // Dynamically add Mapbox CSS
