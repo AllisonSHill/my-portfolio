@@ -38,10 +38,10 @@ p, a, button, .small-text, small {
 /**********END OF FONTS********************/
 
 body {
-    background: rgb(154,58,180);
+    /* background: rgb(154,58,180); */
     /*background: linear-gradient(16deg, rgba(154,58,180,1) 15%, rgba(253,29,64,1) 50%, rgba(252,166,69,1) 94%);*/
     /*background: linear-gradient(16deg, rgba(230,100,255,1) 15%, rgba(255,129,164,1) 50%, rgba(255,255,169,1) 94%);*/
-    background: linear-gradient(16deg, rgb(80,50,140) 15%, rgb(180,150,240) 50%, #00e0ff 94%);
+    /* background: linear-gradient(16deg, rgb(80,50,140) 15%, rgb(180,150,240) 50%, #00e0ff 94%); */
     background-size: cover;
     background-attachment: fixed;
     /*margin-top: -21px;*/

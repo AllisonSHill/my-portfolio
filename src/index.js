@@ -5,6 +5,12 @@ import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
+// Dynamically add Mapbox CSS to the head
+const link = document.createElement('link');
+link.href = 'https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css';
+link.rel = 'stylesheet';
+document.head.appendChild(link);
+
 ReactDOM.render(
     <React.StrictMode>
         <Router>

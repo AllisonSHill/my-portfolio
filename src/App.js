@@ -13,6 +13,7 @@ import Portfolio from "./Components/Portfolio"
 import About from "./Components/About"
 import Skills from "./Components/Skills"
 import Contact from "./Components/Contact"
+import Map from './Components/Map'
 
 
 
@@ -26,8 +27,8 @@ function App() {
         <div className="App">
             <HamburgerMenu hidden={hidden} />
             <div className="button-menu">
-                {MenuButton}
-                <Link to="/my-portfolio"><FontAwesomeIcon icon={faHome} className="homeButton" /></Link>
+                {/* {MenuButton} */}
+                {/* <Link to="/my-portfolio"><FontAwesomeIcon icon={faHome} className="homeButton" /></Link> */}
             </div>
             <div className="content-wrapper" onClick={() => { setHidden(true) }}>
                 <Switch>
@@ -36,6 +37,7 @@ function App() {
                     <Route exact path="/about"><About /></Route>
                     <Route exact path="/skills"><Skills /></Route>
                     <Route exact path="/contact"><Contact /></Route>
+                    <Route exact path="/map"><Map /></Route>
                 </Switch>
             </div>
         </div>
