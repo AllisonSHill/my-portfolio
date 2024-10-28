@@ -19,7 +19,13 @@ const Map = () => {
         try {
           const arrayBuffer = await file.arrayBuffer();
           const exifData = ExifReader.load(arrayBuffer);
-          console.log(`EXIF data for ${file.name}:`, exifData);
+        //   console.log(`EXIF data for ${file.name}:`, exifData);
+          const imageUrl = URL.createObjectURL(file);
+
+          console.log(exifData['DateTimeOriginal']?.description)
+          const formattedDate = exifData['DateTimeOriginal']?.description
+            ? new Date(`${exifData['DateTimeOriginal']?.description.split(' ')[0].replace(/:/g, '-')} ${exifData['DateTimeOriginal']?.description.split(' ')[1]}`).toLocaleString('en-US')
+            : 'Date not available'
 
           // Create GeoJSON feature from EXIF coordinates
           theFeatures.push({
@@ -31,7 +37,10 @@ const Map = () => {
                 exifData['GPSLatitude']?.description || 0
               ]
             },
-            properties: {}
+            properties: {
+                image: imageUrl,
+                date: formattedDate
+            }
           });
         } catch (error) {
           console.error(`Error reading EXIF data from ${file.name}:`, error);
@@ -99,6 +108,27 @@ const Map = () => {
         });
       }
     }
+
+    // Add click event listener to display popup with image
+      map.current.on('click', 'points', (e) => {
+        new mapboxgl.Popup()
+          .setLngLat(e.features[0].geometry.coordinates.slice())
+          .setHTML(`
+          <div style="">
+          <img src="${e.features[0].properties.image}" alt="Image" style="width:300px; height:auto;"/>
+          <p><strong>Date Taken:</strong> ${e.features[0].properties.date}</p>
+          </div>
+          `)
+          .addTo(map.current);
+      });
+
+      // Change the cursor to a pointer when hovering over points
+      map.current.on('mouseenter', 'points', () => {
+        map.current.getCanvas().style.cursor = 'pointer';
+      });
+      map.current.on('mouseleave', 'points', () => {
+        map.current.getCanvas().style.cursor = '';
+      });
   }, [features]);
 
   return (
