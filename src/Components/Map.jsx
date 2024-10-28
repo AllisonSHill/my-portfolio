@@ -22,7 +22,6 @@ const Map = () => {
         //   console.log(`EXIF data for ${file.name}:`, exifData);
           const imageUrl = URL.createObjectURL(file);
 
-          console.log(exifData['DateTimeOriginal']?.description)
           const formattedDate = exifData['DateTimeOriginal']?.description
             ? new Date(`${exifData['DateTimeOriginal']?.description.split(' ')[0].replace(/:/g, '-')} ${exifData['DateTimeOriginal']?.description.split(' ')[1]}`).toLocaleString('en-US')
             : 'Date not available'
