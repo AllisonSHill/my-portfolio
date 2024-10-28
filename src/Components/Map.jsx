@@ -27,7 +27,7 @@ const Map = () => {
             : 'Date not available'
 
           // Create GeoJSON feature from EXIF coordinates
-          theFeatures.push({
+          if (exifData['GPSLongitude']?.description) {theFeatures.push({
             type: 'Feature',
             geometry: {
               type: 'Point',
@@ -40,7 +40,9 @@ const Map = () => {
                 image: imageUrl,
                 date: formattedDate
             }
-          });
+          });} else {
+            console.log('NO DATA, ', file.name, formattedDate)
+          }
         } catch (error) {
           console.error(`Error reading EXIF data from ${file.name}:`, error);
         }
@@ -115,7 +117,7 @@ const Map = () => {
           .setHTML(`
           <div style="">
           <img src="${e.features[0].properties.image}" alt="Image" style="width:300px; height:auto;"/>
-          <p><strong>Date Taken:</strong> ${e.features[0].properties.date}</p>
+          <p>${e.features[0].properties.date}</p>
           </div>
           `)
           .addTo(map.current);
